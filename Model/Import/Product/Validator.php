@@ -87,11 +87,11 @@ class Validator extends ParentValidator
             return $valid;
         }
 
-        if ($attrCode === 'status') {
-            $rowData[$attrCode] = (string) $rowData[$attrCode];
+        if ($rowData[$attrCode] === null || trim($rowData[$attrCode]) === '') {
+            return true;
         }
 
-        if (!strlen(trim($rowData[$attrCode] ?? ''))) {
+        if ($rowData[$attrCode] === $this->context->getEmptyAttributeValueConstant() && !$attrParams['is_required']) {
             return true;
         }
         switch ($attrParams['type']) {
