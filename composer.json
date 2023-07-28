@@ -2,7 +2,7 @@
     "name": "perfect-code/module-import-create-options-on-fly",
     "description": "While products import create unexisted select/multiselect options on the fly and reset attributes cached options after that. Works for downloadable products only.",
     "require": {
-        "php": "^7.4",
+        "php": ">=7.4",
         "magento/framework": "*",
         "magento/module-catalog": "*",
         "magento/module-catalog-import-export": "*",
@@ -12,7 +12,7 @@
 
     },
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": [
         "GPL-3.0"
     ],
