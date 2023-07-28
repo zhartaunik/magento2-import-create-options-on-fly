@@ -137,7 +137,7 @@ class Validator extends ParentValidator
 
                             // Refresh attributes cache for entityTypeModel cache
                             if ($entityTypeModel) {
-                                $entityTypeModel->refreshCacheAttributes();
+                                $entityTypeModel->__destruct();
                             }
 
                             $this->dynamicallyOptionAdded[$attrCode][strtolower($value)] = true;
